@@ -95,4 +95,42 @@ if (storyTitle && storyDesc) {
   updateStory(0);
 }
 
+function initImageModal() {
+  const modal = document.querySelector('.image-modal');
+  const modalImage = modal?.querySelector('img');
+  const closeButton = modal?.querySelector('.image-modal-close');
+
+  if (!modal || !modalImage || !closeButton) return;
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modalImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.card img').forEach((img) => {
+    img.addEventListener('click', () => {
+      modal.classList.add('active');
+      modalImage.src = img.src;
+      modalImage.alt = img.alt || 'Product image';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeButton.addEventListener('click', closeModal);
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+}
+
+initImageModal();
+
 applyFilter('all');

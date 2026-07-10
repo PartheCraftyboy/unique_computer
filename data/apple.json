@@ -5,7 +5,7 @@
     "market_price": "₹3,90,000",
     "price": "₹1,59,000",
     "tag": "CREATOR CLASS",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro"
+    "image": "/static/images/macbook-pro-a2485.png"
   },
   {
     "name": "MacBook Pro A3434",
@@ -13,7 +13,7 @@
     "market_price": "₹3,20,000",
     "price": "₹1,39,000",
     "tag": "AI READY",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro,14"
+    "image": "/static/images/macbook-pro-a2485.png"
   },
   {
     "name": "MacBook Air A3241",
@@ -21,7 +21,7 @@
     "market_price": "₹2,10,000",
     "price": "₹99,000",
     "tag": "FUTURE READY",
-    "image": "https://source.unsplash.com/800x600/?macbook,air,15"
+    "image": "/static/images/MacBookAirA3241.png"
   },
   {
     "name": "MacBook Pro A2251 i5",
@@ -29,7 +29,7 @@
     "market_price": "₹1,70,000",
     "price": "₹79,000",
     "tag": "BUSINESS OPTIMIZED",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro,13"
+    "image": "/static/images/MacBookProA2251.png"
   },
   {
     "name": "MacBook Pro A2251 i7 16GB",
@@ -37,7 +37,7 @@
     "market_price": "₹2,00,000",
     "price": "₹99,000",
     "tag": "CREATOR CLASS",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro,13,2020"
+    "image": "/static/images/MacBookProA2251.png"
   },
   {
     "name": "MacBook Pro A2251 i7 32GB",
@@ -45,7 +45,7 @@
     "market_price": "₹2,40,000",
     "price": "₹1,19,000",
     "tag": "AI READY",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro,13,32gb"
+    "image": "/static/images/MacBookProA2251.png"
   },
   {
     "name": "MacBook Pro A2141 i9",
@@ -53,7 +53,7 @@
     "market_price": "₹3,50,000",
     "price": "₹1,29,000",
     "tag": "CREATOR CLASS",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro,16"
+    "image": "/static/images/MacBookProA2141.png"
   },
   {
     "name": "MacBook Pro A2159 i5",
@@ -61,7 +61,7 @@
     "market_price": "₹1,40,000",
     "price": "₹69,000",
     "tag": "BUSINESS OPTIMIZED",
-    "image": "https://source.unsplash.com/800x600/?macbook,pro,2019"
+    "image": "/static/images/MacBook Pro A2159.png"
   },
   {
     "name": "iPad A2429",
@@ -69,6 +69,6 @@
     "market_price": "₹45,000",
     "price": "₹24,999",
     "tag": "CREATOR CLASS",
-    "image": "https://source.unsplash.com/800x600/?ipad,apple"
+    "image": "/static/images/iPadA2429.png"
   }
 ]

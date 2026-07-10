@@ -6,7 +6,7 @@
     "market_price": "₹4,20,000",
     "price": "₹99,000",
     "tag": "WORKSTATION",
-    "image": "https://source.unsplash.com/800x600/?dell,precision"
+    "image": "/static/images/dell_5570.png"
   },
   {
     "name": "Dell Precision 5570",
@@ -15,7 +15,7 @@
     "market_price": "₹3,90,000",
     "price": "₹99,000",
     "tag": "AI READY",
-    "image": "https://source.unsplash.com/800x600/?dell,workstation"
+    "image": "/static/images/dell_5570.png"
   },
   {
     "name": "HP Z840 Workstation",
@@ -24,7 +24,7 @@
     "market_price": "₹1,20,000",
     "price": "₹57,000",
     "tag": "WORKSTATION",
-    "image": "https://source.unsplash.com/800x600/?hp,workstation"
+    "image": "/static/images/HPZ840Workstation.png"
   },
   {
     "name": "Lenovo ThinkPad P16",
@@ -33,7 +33,7 @@
     "market_price": "₹2,70,000",
     "price": "₹1,45,000",
     "tag": "BUSINESS OPTIMIZED",
-    "image": "https://source.unsplash.com/800x600/?lenovo,thinkpad"
+    "image": "/static/images/dell_5570.png"
   },
   {
     "name": "HP ZBook Studio",
@@ -42,6 +42,6 @@
     "market_price": "₹2,75,000",
     "price": "₹1,19,000",
     "tag": "CREATOR CLASS",
-    "image": "https://source.unsplash.com/800x600/?hp,zbook"
+    "image": "/static/images/HPZBookStudio.png"
   }
 ]
