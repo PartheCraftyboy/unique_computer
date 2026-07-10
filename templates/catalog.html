@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Premium Catalog | Unique Computers{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <p class="eyebrow">Premium catalog</p>
+  <h1>A trusted catalog of flagship laptops and workstations.</h1>
+  <p>Browse Apple, Dell, HP, Lenovo, and workstation-class machines with clear market pricing and immediate inquiry options.</p>
+</section>
+
+<div class="filter-row">
+  <button class="filter-chip active" data-filter="all">All</button>
+  <button class="filter-chip" data-filter="Apple">Apple</button>
+  <button class="filter-chip" data-filter="Dell">Dell</button>
+  <button class="filter-chip" data-filter="HP">HP</button>
+  <button class="filter-chip" data-filter="Lenovo">Lenovo</button>
+</div>
+
+<div class="product-grid" id="catalog-grid">
+  {% for p in products %}
+  <article class="card" data-brand="{{ p.get('brand', 'Apple') }}">
+    <img src="{{ p.image }}" alt="{{ p.name }}">
+    <div class="card-body">
+      <p class="card-tag">{{ p.tag }}</p>
+      <h3>{{ p.name }}</h3>
+      <p class="specs">{{ p.specs }}</p>
+      <div class="price-row">
+        <span class="market-price">{{ p.market_price }}</span>
+        <span class="our-price">{{ p.price }}</span>
+      </div>
+      <p class="price-note">Originally {{ p.market_price }} → Now {{ p.price }}</p>
+      <div class="card-actions">
+        <a class="btn btn-primary btn-small" href="https://wa.me/919999999999?text=Hello%20Unique%20Computers%2C%20I%20am%20interested%20in%20{{ p.name }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-secondary btn-small" href="tel:+919839008320">Call</a>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Windows Laptops | Unique Computers{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <p class="eyebrow">Windows • workstation and business machines</p>
+  <h1>Enterprise-grade Windows laptops and workstations at premium value.</h1>
+  <p>From Dell Precision to HP ZBook and Lenovo ThinkPad, every product is grouped by brand so you can compare premium machines quickly.</p>
+</section>
+
+<div class="filter-row">
+  <button class="filter-chip active" data-filter="all">All</button>
+  <button class="filter-chip" data-filter="Dell">Dell</button>
+  <button class="filter-chip" data-filter="HP">HP</button>
+  <button class="filter-chip" data-filter="Lenovo">Lenovo</button>
+</div>
+
+{% set brands = products | map(attribute='brand') | unique %}
+
+{% for brand in brands %}
+<section class="brand-section" data-brand-section="{{ brand }}">
+  <div class="brand-header">
+    <span class="brand-pill">{{ brand }}</span>
+    <h2>{{ brand }} lineup</h2>
+    <p>Premium {{ brand }} machines grouped for easier comparison and inquiry.</p>
+  </div>
+  <div class="product-grid">
+    {% for p in products if p.brand == brand %}
+    <article class="card" data-brand="{{ p.brand }}">
+      <img src="{{ p.image }}" alt="{{ p.name }}">
+      <div class="card-body">
+        <p class="card-tag">{{ p.tag }}</p>
+        <h3>{{ p.name }}</h3>
+        <p class="specs">{{ p.specs }}</p>
+        <div class="price-row">
+          <span class="market-price">{{ p.market_price }}</span>
+          <span class="our-price">{{ p.price }}</span>
+        </div>
+        <p class="price-note">Originally {{ p.market_price }} → Now {{ p.price }}</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-small" href="https://wa.me/919999999999?text=Hello%20Unique%20Computers%2C%20I%20am%20interested%20in%20{{ p.name }}" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-secondary btn-small" href="tel:+919839008320">Call</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

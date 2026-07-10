@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Unique Computers{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="nav">
+      <a href="/" class="brand">Unique <span>Computers</span></a>
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="/apple">Apple</a>
+        <a href="/windows">Windows</a>
+        <a href="/catalog">Catalog</a>
+        <a class="phone-pill" href="tel:+919839008320">Call Now: 9839008320</a>
+      </div>
+    </nav>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <a class="floating-wa" href="https://wa.me/919999999999?text=Hello%20Unique%20Computers%2C%20I%20would%20like%20to%20enquire%20about%20a%20premium%20laptop." target="_blank" rel="noopener">WhatsApp</a>
+    <a class="floating-call" href="tel:+919839008320">Call Now: 9839008320</a>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

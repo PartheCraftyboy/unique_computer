@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Apple Laptops | Unique Computers{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <p class="eyebrow">Apple • premium refurbished machines</p>
+  <h1>MacBooks and Apple desktops at flagship pricing.</h1>
+  <p>Clean, premium, and ready for coding, design, and high-end everyday work.</p>
+</section>
+
+<div class="product-grid">
+  {% for p in products %}
+  <article class="card">
+    <img src="{{ p.image }}" alt="{{ p.name }}">
+    <div class="card-body">
+      <p class="card-tag">{{ p.tag }}</p>
+      <h3>{{ p.name }}</h3>
+      <p class="specs">{{ p.specs }}</p>
+      <div class="price-row">
+        <span class="market-price">{{ p.market_price }}</span>
+        <span class="our-price">{{ p.price }}</span>
+      </div>
+      <p class="price-note">Originally {{ p.market_price }} → Now {{ p.price }}</p>
+      <div class="card-actions">
+        <a class="btn btn-primary btn-small" href="https://wa.me/919999999999?text=Hello%20Unique%20Computers%2C%20I%20am%20interested%20in%20{{ p.name }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-secondary btn-small" href="tel:+919839008320">Call</a>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endblock %}

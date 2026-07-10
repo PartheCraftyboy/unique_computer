@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Premium Laptop Catalog | Unique Computers{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-copy">
+    <p class="eyebrow">Open-box flagship laptops • up to 70% off</p>
+    <h1>Premium laptops, reduced for serious performance.</h1>
+    <p class="hero-text">From Apple M-series chips to Dell Precision and HP ZBook workstations, every laptop is inspected, cleaned, and presented as a high-trust deal.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/catalog">Browse catalog</a>
+      <a class="btn btn-secondary" href="https://wa.me/919999999999?text=Hello%20Unique%20Computers%2C%20I%20would%20like%20to%20explore%20premium%20laptops." target="_blank" rel="noopener">Ask on WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>4.9/5</strong><span>Client trust</span></div>
+      <div><strong>70%</strong><span>Maximum savings</span></div>
+      <div><strong>24h</strong><span>Quick response</span></div>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80" alt="Premium laptop showcase">
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="story-shell">
+    <div class="story-copy-card">
+      <p class="eyebrow">Scroll story</p>
+      <h2 id="story-title">Dell Precision for coding, rendering, and AI-ready workflows</h2>
+      <p id="story-desc">Choose an enterprise-grade machine that feels premium, performs like a workstation, and stays affordable for modern creators and analysts.</p>
+      <div class="story-visual">
+        <img id="story-image" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=80" alt="Laptop story visual">
+        <div class="story-badge" id="story-brand">Dell Precision</div>
+      </div>
+      <div class="pill-row" id="story-tags"></div>
+    </div>
+
+    <div class="story-steps">
+      <div class="story-step active" data-brand="Dell Precision 5560" data-title="Dell Precision 5560: premium mobile workstation" data-desc="Open-box Indian original Precision 5560 with 4K touchscreen, T1200 GPU, and office-backed warranty — built for CAD, 3D, coding, and editing." data-tags="WORKSTATION • BUSINESS OPTIMIZED" data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1000&q=80">
+        <span class="step-label">Dell</span>
+        <h3>Precision 5560</h3>
+      </div>
+      <div class="story-step" data-brand="Dell Precision 5570" data-title="Dell Precision 5570: pro-class GPU performance" data-desc="A mobile workstation with 12th Gen i7, RTX A1000, and fast Gen4 storage — ideal for video editing and AI-ready workflows." data-tags="AI READY • CREATOR CLASS" data-image="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1000&q=80">
+        <span class="step-label">Dell</span>
+        <h3>Precision 5570</h3>
+      </div>
+      <div class="story-step" data-brand="HP ZBook" data-title="HP ZBook for design-heavy studios and enterprise teams" data-desc="Slim yet serious laptops with creator-level performance for Photoshop, Premiere Pro, and multi-app workflows." data-tags="CREATOR CLASS • BUSINESS OPTIMIZED" data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=80">
+        <span class="step-label">HP</span>
+        <h3>ZBook</h3>
+      </div>
+      <div class="story-step" data-brand="Lenovo ThinkPad" data-title="Lenovo ThinkPad for polished business productivity" data-desc="Reliable, durable, and quietly powerful for office, accounting, and everyday professional use." data-tags="BUSINESS OPTIMIZED • FUTURE READY" data-image="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=1000&q=80">
+        <span class="step-label">Lenovo</span>
+        <h3>ThinkPad</h3>
+      </div>
+      <div class="story-step" data-brand="Apple MacBook" data-title="Apple MacBook for premium portability and clean performance" data-desc="M-series MacBooks bring exceptional battery life, quiet performance, and a luxury experience for coding and content creation." data-tags="AI READY • CREATOR CLASS" data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1000&q=80">
+        <span class="step-label">Apple</span>
+        <h3>MacBook</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog-preview">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Featured machines</p>
+      <h2>High-value laptops ready for immediate inquiry.</h2>
+    </div>
+    <a class="btn btn-secondary" href="/catalog">View full catalog</a>
+  </div>
+
+  <div class="product-grid">
+    {% for p in products %}
+    <article class="card">
+      <img src="{{ p.image }}" alt="{{ p.name }}">
+      <div class="card-body">
+        <p class="card-tag">{{ p.tag }}</p>
+        <h3>{{ p.name }}</h3>
+        <p class="specs">{{ p.specs }}</p>
+        <div class="price-row">
+          <span class="market-price">{{ p.market_price }}</span>
+          <span class="our-price">{{ p.price }}</span>
+        </div>
+        <p class="price-note">Originally {{ p.market_price }} → Now {{ p.price }}</p>
+        <div class="card-actions">
+          <a class="btn btn-primary btn-small" href="https://wa.me/919999999999?text=Hello%20Unique%20Computers%2C%20I%20am%20interested%20in%20{{ p.name }}" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-secondary btn-small" href="tel:+919839008320">Call</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
