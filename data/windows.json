@@ -43,5 +43,14 @@
     "price": "₹1,19,000",
     "tag": "CREATOR CLASS",
     "image": "/static/images/HPZBookStudio.png"
+  },
+  {
+    "name": "HP EliteBook G10 840",
+    "brand": "HP",
+    "specs": "Intel Core i7 13th Gen | 16GB RAM | 512GB SSD | 14-inch | Business class",
+    "market_price": "₹90,000",
+    "price": "₹59,000",
+    "tag": "BUSINESS OPTIMIZED",
+    "image": "/static/images/HPEliteBookG10840.png"
   }
 ]
